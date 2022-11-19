@@ -22,7 +22,7 @@ function new_websocket(url, ready_callback, message_callback) {
     return socket;
 }
 
-new_websocket('ws://server.myecoria.com:7058', function(socket) {
+new_websocket('wss://ws.dogenano.io', function(socket) {
     // onopen
     let params = {
         action: 'subscribe',
