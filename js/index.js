@@ -22,7 +22,7 @@ function new_websocket(url, ready_callback, message_callback) {
     return socket;
 }
 
-new_websocket('wss://ws.dogenano.io', function(socket) {
+new_websocket('ws://152.228.162.18:7089', function(socket) {
     // onopen
     let params = {
         action: 'subscribe',
