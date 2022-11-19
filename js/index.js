@@ -247,7 +247,7 @@ function toggle_adverts() {
 }
 
 function toggle_donate_qr() {
-    $('#donation-account').html('<a href="https://nanocrawler.cc/explorer/account/' + donate_address + '" target="_new">' + donate_address + '</a>');
+    $('#donation-account').html('<a href="https://explorer.dogenano.io/account/' + donate_address + '" target="_new">' + donate_address + '</a>');
     if ($('#donate').css('display') == 'none') {
         $('#donate').css('display', 'block');
     } else {
@@ -263,7 +263,7 @@ function donation(data) {
 
     // Start special ascii
     $('#buildings').html(special_html);
-    var donation_link_html = '(from <a href="https://nanocrawler.cc/explorer/block/' + data.hash + '" target="_new">' + data.account.slice(0, 8) + '...' + data.account.slice(-3, data.account.length) + '</a>)';
+    var donation_link_html = '(from <a href="https://explorer.dogenano.io/block/' + data.hash + '" target="_new">' + data.account.slice(0, 8) + '...' + data.account.slice(-3, data.account.length) + '</a>)';
     $('#donation-link').html(donation_link_html);
     var timer = setInterval(function() {
         if ($('#ornament-1').css('color') != 'rgb(255, 0, 0)') {
