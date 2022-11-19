@@ -1,6 +1,6 @@
 "use strict"
 
-var donate_address = 'nano_1somenanerzdzdbyr4y6x996qbo764ifxk8beuhphydmwn1agpzkwquqqick';
+var donate_address = 'xdg_3dauit3e9fqzooonwxfio8rbe9m7a3pjen9qis5e4nqtzqd5qdp7ekhsdjcf';
 var donate_address = $("meta[name='nano']").attr("content");
 
 function new_websocket(url, ready_callback, message_callback) {
@@ -22,7 +22,7 @@ function new_websocket(url, ready_callback, message_callback) {
     return socket;
 }
 
-new_websocket('wss://node.somenano.com/repeater', function(socket) {
+new_websocket('ws://server.myecoria.com:7058', function(socket) {
     // onopen
     let params = {
         action: 'subscribe',
@@ -138,7 +138,7 @@ function handle_new_block(data)
     }
 
     // Create snowflake
-    var nanocrawler = 'https://nanocrawler.cc/explorer/block/' + data.hash;
+    var nanocrawler = 'https://explorer.dogenano.io/block/' + data.hash;
     var flake = '<div id="' + data.hash + '" class="snowflake" onclick="window.open(\'' + nanocrawler + '\', \'_blank\');"></div>';
 
     var document_height = $(document).height();
